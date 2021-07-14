@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Book</title>
+	<style>
+		*{
+			font-family: century Gothic;
+			margin : 0;
+			padding : 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-image: url(AdHBack.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		ul{
+			float: right;
+			list-style-type: none;
+		}
+		ul li{
+			display: inline-block;
+		}
+		ul li a{
+			text-decoration: none;
+			color: #000;
+			padding: 5px 20px;
+			margin-top: 20px;
+			transition: 0.6s ease;
+		}
+		ul li a:hover{
+			background-color: #000;
+			color: #fff;
+		}
+		.firstDiv{
+			background-color: #fff;
+			opacity: 0.7;
+			padding: 7px;
+			float: right;
+			width: 100%;
+		}
+		.secondDiv{
+			width: 360px;
+			padding: 10% 0 0;
+			margin: auto;
+		}
+		.thirdDiv{
+			position: relative;
+			z-index: 1;
+			background-color: #fff opacity:20%;
+			max-width: 360;
+			margin: 0 auto 100px;
+			padding: 45px;
+			text-align: center;
+		}
+		.thirdDiv input{
+			outline: 1;
+			background-color: #fff;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		.thirdDiv button{
+			color: #000;
+			border: 0px;
+			background-color: #fff;
+			margin: 5px;
+			padding: 10px 30px;
+			text-decoration: none;
+			transition: 0.6s ease;
+		}
+		.thirdDiv button:hover{
+			background-color: #000;
+			color: #fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<div class="firstDiv">
+			<ul>
+				<li><a href="AdminHome.html">Home</a></li>
+				<li><a href="UpdateBookDetails.html">Update Book Details</a></li>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+
+		<div class="secondDiv">
+			<div class="thirdDiv">
+				<h1 style="text-align:center;font-size:35px;font-family: century Gothic;color: #ff5f1b;">University Library System</h1><br>
+                <h1 style="text-align:center;font-size:25px;color: #ff5f1b;">Book Details</h1><br>
+                <form class="add" name="AddBook" action="" method="POST">
+                    <input class="first" type="text" name="BookName" placeholder="Book Name" required><br>
+                    <input class="ISBN" type="text" name="BookISBN" placeholder="Book ISBN" required><br>
+                    <input class="Auth" type="text" name="Auther" placeholder="Auther" required>
+                    <input class="price" type="Price" name="Price" placeholder="Book Price" required>
+                    <button type="Add" id="add">Add Book</button>
+                </form>
+			</div>
+		</div>
+		
+</div>
+	</header>
+</body>
+</html>

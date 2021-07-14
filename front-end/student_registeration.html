@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student registeration</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+    <header id="navbar2">
+        <div class="logo">
+
+            <h1 style="color: white;">University Library System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="" onclick="al()">BOOKS</a></li>
+                <li><a href="student_login.html">STUDENT-LOGIN</a></li>
+                <li><a href="student_registeration.html">REGISTERATION</a></li>
+                <li><a href="feedback.php">FEEDBACK</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="reg_img"></div>
+            <div class="box2">
+                <br>
+                <br>
+                <h1 style="text-align:center;font-size:35px;font-family: lucida console;color: white;">University Library System</h1><br>
+                <h1 style="text-align:center;font-size:25px;color: white;">Student Registeration Form</h1><br>
+                <form name="registeration" action="" method="POST">
+                    <input class="first" type="text" name="firstName" placeholder="First Name" required><br>
+                    <input class="last" type="text" name="lastName" placeholder="Last Name" required><br>
+                    <input class="pass" type="password" name="password" placeholder="password" required>
+                    <input class="em" type="email" name="E-mail" placeholder="*************@gmail.com" required>
+                    <a href="book.html"><button id="log2">Sign Up</button></a>
+                </form>
+        </div>
+        <footer>
+            <p class="pfooter">Email: <a href="Online.library@gmail.com">Online.library@gmail.com</a><p>
+              <p>  Mobile:  0105********</p>
+          </footer>
+    <script >
+        function al(){
+            alert("sign up first")
+        }
+    </script>
+    </body>
+</html>
