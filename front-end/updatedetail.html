@@ -6,40 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Updating details</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/Student.css" type="text/css"/>
 </head>
 <body>
-    <header id="navbar2">
-        <div class="logo">
-            <p style="color: white;" >University Library System</p>
-        </div>
-        <nav>
+    <header>
+        <div class="firstDiv">
             <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="book.html">BOOKS</a></li>
-                <li><a href="student_login.html">STUDENT-LOGIN</a></li>
-                <li><a href="registeration.html">REGISTERATION</a></li>
-                <li><a href="feedback.php">FEEDBACK</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AdminHome.html">Books</a></li>
+                <li><a href="admin_registeration">Registration</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">About</a></li>
             </ul>
-        </nav>
-    </header>
-<div class="update_img"></div>
-            <div class="box2">
-                <br>
-                <br>
-                <h1 style="text-align:center;font-size:35px;font-family: lucida console;color: white;">University Library System</h1><br>
-                <h1 style="text-align:center;font-size:25px;color: white;">Updating a user details</h1><br>
-                <form name="registeration" action="" method="POST">
-                    <input class="first" type="text" name="firstName" placeholder="Enter new First Name"><br>
-                    <input class="last" type="text" name="lastName" placeholder="Enter new Last Name"><br>
-                    <input class="pass" type="password" name="password" placeholder="Enter new password"><br>
-                    <input class="em" type="email" name="E-mail" placeholder="Enter new E-mail">
-                    <button type="submit" id="log2">Update</button>
-                </form>
         </div>
-        <footer>
-            <p class="pfooter">Email: <a href="Online.library@gmail.com">Online.library@gmail.com</a><p>
-              <p>  Mobile:  0105********</p>
-          </footer>
+
+        <div class="secondDiv">
+            <div class="thirdDiv">
+                <h1 style="text-align:center;font-size:35px;font-family: century Gothic;color: #000;">University Library System</h1><br>
+                <h1 style="text-align:center;font-size:25px;color: #000;">Update Personal Info</h1><br>
+                <form name="AddBook" action="" method="POST">
+                    <input  type="text" name="FirstName" placeholder="First Name" ><br>
+                    <input  type="text" name="LastName" placeholder="Last Name" ><br>
+                    <input  type="Email" name="Email" placeholder="Email" ><br>
+                    <input  type="Password" name="Password" placeholder="Password" ><br>
+                    <button type="Submet" id="Submet">Update</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </header>
 </body>
+<footer>
+    <p class="pfooter">Email: <a href="Online.library@gmail.com">Online.library@gmail.com</a><p>
+  </footer>
 </html>

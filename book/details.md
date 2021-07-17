@@ -8,3 +8,13 @@ Home page
 8. Showing a list of books that satisfy certain criteria (e.g., ISBN, publication year, author…) 
 9. Performing operations on books: borrowing, returning, extending borrowing period 
 10. Log out
+
+    title=models.CharField(max_length=100)
+    ISBN=models.IntegerField(default=0)
+    publishedAt=models.DateField(auto_now=True)
+    borrowingPeriod=models.IntegerField(default=0)
+    numberOfPages=models.IntegerField(default=0)
+    author=models.CharField(max_length=100)
+    image=models.ImageField()
+    borowingStatu=models.BooleanField()
+    description=models.TextField()

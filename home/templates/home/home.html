@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/Home.css' %}" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <article class="all-browsers">
+        <div id="container">
+            <header>
+                <div class="firstDiv">
+                    <ul>
+                        <li><a href="{% url 'home:homepage' %}">HOME</a></li>
+                        <li><a href="" onclick="al()">BOOKS</a></li>
+                        <li><a href="student_login.html">STUDENT-LOGIN</a></li>
+                        <li><a href="admin_login.html">ADMIN-LOGIN</a></li>
+                        <li><a href="#aboutus"><button id="button2">About us</button></a></li>
+                    </ul>
+                </div>>
+
+            </header>
+            <div class="secondDiv"></div>
+            <div class="box">
+                <br><br>
+                <h1 style="font-size: 35px; ">Welcom to library</h1><br><br>
+                <h1 style="font-size: 25px; ">Opens at: 09:00AM </h1><br>
+                <h1 style="font-size: 25px; ">Closes at: 7:00PM </h1><br>
+            </div>
+    </article>
+    <div id="aboutus">
+    </div>
+    <script>
+        document.getElementById("button2").onclick = function loadDivLearnMore() {
+            var requst = new XMLHttpRequest();
+            requst.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("aboutus").innerHTML = this.responseText;
+                }
+            };
+            requst.open("GET", "home/about-us.txt", true);
+            requst.send();
+            requst.onloadend = ur1l;
+
+        }
+
+        function ur1l() {
+            location.href = "#aboutus";
+        }
+    </script>
+
+</body>
+<footer>
+    <p class="pfooter">Email: <a href="Online.library@gmail.com">Online.library@gmail.com</a>
+        <p>
+</footer>
+
+</html>

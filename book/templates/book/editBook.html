@@ -1,0 +1,40 @@
+{% load bootstrap4 %} {% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="{% static 'CSS/StyleSheet.css' %}" type="text/css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="firstDiv">
+            <ul>
+                <li><a href="AdminHome.html">Home</a></li>
+                <li><a href="{% url 'books:bookList' %}">BOOKS</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <h1 style="text-align:center;font-size:35px;font-family: century Gothic;color:teal;">University Library System</h1><br>
+        <div style="padding: 0%;" class="secondDiv">
+            <div class="thirdDiv">
+                <h1 style="text-align:center;font-size:30px;color: #ff5f1b;">Edit Book</h1><br>
+                <h1 style="text-align:center;font-size:25px;color: #ff5f1b;">Book Details</h1><br>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+                    <button type="submit" class="btn btn-primary">Change Now</button> {% endbuttons %}
+                </form>
+
+
+            </div>
+        </div>
+
+        </div>
+    </header>
+</body>
+
+
+</html>
