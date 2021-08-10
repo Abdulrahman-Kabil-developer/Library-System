@@ -74,21 +74,24 @@
     left: 49.25%;
     top: 169%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-40%, -50%);
-    margin: 0;
+    transform: translate(-37%, -50%);
+    margin: 97px;
+    padding: 33px;
     border-radius: 60px;
     background-color: transparent;
     box-shadow: none;">
         <ul>
             {% if bookList.has_previous %}
             <li>
-                <a href="?page={{bookList.previous_page_number}}"> &laquo </a>
+                <a style="color: white;" href="?page={{bookList.previous_page_number}}"> &laquo </a>
             </li>
-            {% endif %} {% for i in bookList.paginator.page_range %}
-            <li><a href="?page={{i}}"><span>{{i}}</span></a></li>
+            {% endif %} {% for i in bookList.paginator.page_range %} {% if i|divisibleby:5 %}
+            <br> {% endif %}
+            <li><a style="color: white;" href="?page={{i}}"><span>{{i}}</span></a></li>
+
             {% endfor %} {% if bookList.has_next %}
             <li>
-                <a href="?page={{bookList.next_page_number}}"> &raquo </a>
+                <a style="color: white;" href="?page={{bookList.next_page_number}}"> &raquo </a>
             </li>
             {% endif %}
 

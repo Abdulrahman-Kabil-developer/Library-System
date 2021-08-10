@@ -1,60 +1,30 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base0.html" %}{% load bootstrap4 %} {% load static %} {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{book.slug}}</title>
-    <link rel="stylesheet" href="{% static 'CSS/styleBook.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 
-<body>
-    <div class="main">
-        <section class="nav">
-            <!-- start of nav-->
-            <div class="container">
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="{% url 'books:bookList' %}">BOOKS</a></li>
-                    <li><a href="updatedetail.html">Edit_profile</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="home.html" onclick="confirm1()">Logout</a></li>
-                </ul>
-            </div>
-        </section>
-        <!--end of nav -->
-        <div style="margin: 100px;background-color: #fff; opacity: 0.9; border: 0px;
+<!--end of nav -->
+<div style="margin: 100px;background-color: #fff; opacity: 0.9; border: 0px;
         " class="row">
-            <div class=" column">
-                <a href="#" target="blank"><img style="width: 225px; height: 300px;" src="{{book.image.url}}" alt=""></a>
-                <br>
+    <div class=" column">
+        <a href="#" target="blank"><img style="width: 225px; height: 300px;" src="{{book.image.url}}" alt=""></a>
+        <br>
 
-            </div>
-            <div class="columnright">
-                <h1 style="text-align: unset;">{{book.title}}</h1>
-
-                <br>
-                <h3>Book Title: <span class="spann">{{book.title}}</span> </h3>
-                <h3>Book ISBN: <span class="spann">{{book.ISBN}}</span> </h3>
-                <h3>Book Author: <span class="spann">{{book.author}}</span> </h3>
-                <h3>Published-At: <span class="spann">{{book.publishedAt|date:'d M o'}}</span></h3>
-                <h3>Borrowing <span class="spann">{{book.borowingStatu}}</span></h3>
-                <h3>Book Borrowing-Period: <span class="spann">{{book.borrowingPeriod}} Day's</span></h3>
-                <br>
-                <h3>Description:-</h3>
-                <br>
-                <p><span class="spann">{{book.description}}</span></p>
-
-                <a class="borrowing" id="borrow" style="transform: translateX(-13%)translateY(18%);position:static;">Borrowing</a>
-                <a class="borrowing" id="borrow" style="transform: translateX(-13%)translateY(18%);position:static;" href="{% url 'books:editBook' book.slug %}">Edit Book</a>
-            </div>
-
-
-        </div>
     </div>
-</body>
+    <div class="columnright">
+        <h1 style="text-align: unset;">{{book.title}}</h1>
 
-</html>
+        <br>
+        <h3>Book Title: <span class="spann">{{book.title}}</span> </h3>
+        <h3>Book ISBN: <span class="spann">{{book.ISBN}}</span> </h3>
+        <h3>Book Author: <span class="spann">{{book.author}}</span> </h3>
+        <h3>Published-At: <span class="spann">{{book.publishedAt|date:'d M o'}}</span></h3>
+        <h3>Borrowing <span class="spann">{{book.borowingStatu}}</span></h3>
+        <h3>Book Borrowing-Period: <span class="spann">{{book.borrowingPeriod}} Day's</span></h3>
+        <br>
+        <h3>Description:-</h3>
+        <br>
+        <p><span class="spann">{{book.description}}</span></p>
+
+        <a class="borrowing" id="borrow" style="transform: translateX(-13%)translateY(18%);position:static;">Borrowing</a>
+        <a class="borrowing" id="borrow" style="transform: translateX(-13%)translateY(18%);position:static;" href="{% url 'books:editBook' book.slug %}">Edit Book</a>
+    </div>
+    {% endblock content %}

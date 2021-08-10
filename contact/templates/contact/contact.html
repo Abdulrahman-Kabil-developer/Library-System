@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load bootstrap4 %} {% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <h1>Contact US</h1>
+        <br>
+        <input type="email" placeholder="Email" name="email" />
+        <input type="text" placeholder="Subject" title="subject" name="subject" />
+        <textarea style="margin: 0px; width: 270px; height: 111px;" placeholder="Message" name="message"></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+<div style="position: relative; transform: translateX(0%) translateY(24%);">
+    <h1>about us</h1>
+    <h3>Place : <span style="color: red;">{{myInfo.place}}</span></h3>
+    <h3>Email :<span style="color: red;">{{myInfo.email}}</span> </h3>
+    <h3>Phone : <span style="color: red;">{{myInfo.phoneNumber}}</span> </h3>
+    <h3 style="display: inline;">Description : <span style="color: red;">{{myInfo.description}}</span> </h3>
+    <br>
+</div>
+{% endblock content %}

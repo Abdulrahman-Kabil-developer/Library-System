@@ -1,0 +1,26 @@
+{% extends "base0.html" %}{% load bootstrap4 %} {% load static %} {% block content %}
+<!--end of nav -->
+<div style="margin: 100px;background-color: #fff; opacity: 0.9; border: 0px;
+        " class="row">
+    <div class=" column">
+        <a href="#" target="blank"><img style="width: 225px; height: 300px;" src="{{profile.image.url}}" alt=""></a>
+        <br>
+
+    </div>
+    <div class="columnright">
+        <h1 style="text-align: unset;">{{profile}}</h1>
+
+        <br>
+        <h3>Name: <span class="spann">{{profile}}</span> </h3>
+        <h3>Email: <span class="spann">{{profile.user.email}}</span> </h3>
+        <h3>Phone: <span class="spann">{{profile.phoneNumber}}</span> </h3>
+        <h3>National ID: <span class="spann">{{profile.nationalID}}</span></h3>
+        <br>
+        <h3>Description:-</h3>
+        <br>
+        <p><span class="spann">{{book.description}}</span></p>
+
+        <a class="borrowing" id="borrow" href="{% url 'accounts:profile_edit' %}" style="transform: translateX(-13%)translateY(18%);position:static;">Edit Profile</a>
+    </div>
+
+    {% endblock %}

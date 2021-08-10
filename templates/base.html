@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/StyleSheet.css' %}" type="text/css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="firstDiv">
+            <ul>
+                <li><a href="{% url 'home:homepage' %}">HOME</a></li>
+                <li><a href="{% url 'books:bookList' %}">BOOKS</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'accounts:profile' %}">Profile</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">STUDENT-LOGIN</a></li>
+                <li><a href="{% url 'login' %}">ADMIN-LOGIN</a></li>
+                {% endif %}
+
+                <li><a href="admin_login.html">Logout</a></li>
+                <li><a href="#aboutus"><button id="button2">About us</button></a></li>
+            </ul>
+        </div>>
+
+    </header>
+
+    <div class="secondDiv">
+        <div class="thirdDiv">
+            <h1 style="text-align:center;font-size:35px;font-family: century Gothic;color: #ff5f1b;">University Library System</h1><br>
+            <br> {% block content %} {% endblock content %}
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+
+</html>

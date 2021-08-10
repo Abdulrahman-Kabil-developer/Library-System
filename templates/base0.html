@@ -1,0 +1,38 @@
+{% load bootstrap4 %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+    <link rel="stylesheet" href="{% static 'CSS/styleBook.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="nav">
+            <!-- start of nav-->
+            <div style="position:fixed;" class="container">
+                <ul>
+                    <li><a href="{% url 'home:homepage' %}">HOME</a></li>
+                    <li><a href="{% url 'books:bookList' %}">BOOKS</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'accounts:profile' %}">Profile</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">STUDENT-LOGIN</a></li>
+                    <li><a href="{% url 'login' %}">ADMIN-LOGIN</a></li>
+                    {% endif %}
+                    <li><a href="admin_login.html">Logout</a></li>
+                    <li><a href="#aboutus"><button id="button2">About us</button></a></li>
+                </ul>
+            </div>
+            {% block content %} {% endblock content %}
+
+</body>
+
+
+</html>
